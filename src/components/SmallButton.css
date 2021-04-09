@@ -1,0 +1,29 @@
+.smallButtons {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.button {
+    margin: 0 1rem;
+    font-size: 1rem;
+    height: 3rem;
+    width: 5rem;
+    border-radius: 8px;
+    border: 1px solid var(--dark-gray);
+}
+
+.startBtn {
+   background-color: var(--light-green);
+}
+
+.stopBtn {
+    background-color: var(--light-orange);  
+}
+
+.resetBtn {
+    background-color: var(--light-gray);
+}
+
+.taskBtn {
+    background-color: var(--light-blue);
+}

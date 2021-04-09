@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+header {
+    height: 15vh;
+    background-color: var(--header-background);
+    align-items: center;
+}
+
+h1 {
+    width: fit-content;
+    display: inline-block;
+    color: var(--header-orange);
+    margin: 2rem 1rem 2rem 10rem;
+}
+
+.fas {
+    color: var(--header-orange);
+    font-size: 2rem;
+}
+
+.currentDate {
+    float: right;
+    margin: 2rem 10rem;
+    font-size: 2rem;
+    color: var(--dark-gray);
+    font-weight: 300;
+}
