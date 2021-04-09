@@ -1,18 +1,48 @@
 import React, { useState, useEffect } from 'react';
+import SmallButton from './SmallButton';
 import './Timer.css'
 
 const Timer = () => { 
 
-    const [minute, setMinute] = useState(25);
+  const [second, setSecond] = useState(1500);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    const timer =
-      minute > 0 && setInterval(() => setMinute(minute - 1), 60000);
-    return () => clearInterval(timer);
-  }, [minute]);
+    let secondInterval = null;
+    if (isActive) {
+      secondInterval = setInterval(() => setSecond(second - 1), 1000);
+    } 
+    return () => {
+        clearInterval(secondInterval);
+    }
+  }, [isActive, second]);
+
+  const resetCounter = () => {
+    setSecond(1500);
+    setIsActive(false);
+  }
 
   return (
-    <h2 className='counter'>{minute}:00</h2>
+    <>
+      <h2 className='counter'>{second}</h2>
+      <div className='smallButtons'>
+          <SmallButton 
+            className='startBtn button'
+            onClick={() => setIsActive(true)}
+            title='Start'
+          />
+          <SmallButton 
+            className='stopBtn button'
+            onClick={() => setIsActive(false)}
+            title='Stop'
+          />
+          <SmallButton 
+            className='resetBtn button'
+            onClick={() => resetCounter()}
+            title='Reset'
+          />
+        </div>
+      </>  
   );
 }
 
