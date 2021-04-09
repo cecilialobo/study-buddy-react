@@ -12,9 +12,7 @@ const Timer = () => {
     if (isActive) {
       secondInterval = setInterval(() => setSecond(second - 1), 1000);
     } 
-    return () => {
-        clearInterval(secondInterval);
-    }
+    return () => clearInterval(secondInterval);
   }, [isActive, second]);
 
   const resetCounter = () => {
@@ -22,9 +20,19 @@ const Timer = () => {
     setIsActive(false);
   }
 
+  const showCountdown = () => {
+    const remainingMinutes = Math.floor(second / 60);
+    const remainingSeconds = second % 60;
+    if (remainingSeconds < 10) {
+      return `${remainingMinutes}:0${remainingSeconds}`
+    }
+    return `${remainingMinutes}:${remainingSeconds}`
+  }
+
+
   return (
     <>
-      <h2 className='counter'>{second}</h2>
+      <h2 className='counter'>{showCountdown()}</h2>
       <div className='smallButtons'>
           <SmallButton 
             className='startBtn button'
