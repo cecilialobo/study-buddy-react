@@ -31,7 +31,6 @@ const months = {
 const dayOfMonth = new Date().getDate()
 
 const daySufix = (dayOfMonth) => {
-  console.log(dayOfMonth)
   if (dayOfMonth === 1) {
     return 'st'
   }

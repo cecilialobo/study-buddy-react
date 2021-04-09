@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 import SmallButton from './SmallButton';
+import './Card.css'
 
 const Card = (props) => {
 
-    const [status, setStatus] = useState('undone');
+    const [status, setStatus] = useState('to do');
+    const [btnStatus, setBtnStatus] = useState('done');
 
     const checkIfDone = () => {
-        status === 'undone' ? setStatus('done') : setStatus('undone');
+        status === 'to do' ? setStatus('done') : setStatus('to do');
+        btnStatus === 'done' ? setBtnStatus('to do') : setBtnStatus('done');
     }
 
     return (
         <div className='card'>
-            <h3>{props.taskTitle}</h3>
-            <p>Status: {status}</p>
+            <h3 className='cardContent'>{props.taskTitle}</h3>
+            <p className='cardStatus cardContent'>Status: {status}</p>
             <SmallButton 
-                className='taskBtn button'
+                className='cardButton cardContent'
                 onClick={checkIfDone}
-                title='Mark as done'
+                title={`Mark as ${btnStatus}`}
             />
         </div>
     )
