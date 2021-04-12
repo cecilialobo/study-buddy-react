@@ -4,31 +4,34 @@ import './Timer.css'
 
 const Timer = () => { 
 
-  const [second, setSecond] = useState(1500);
+  const [seconds, setSeconds] = useState(2);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     let secondInterval = null;
     if (isActive) {
-      secondInterval = setInterval(() => setSecond(second - 1), 1000);
+        secondInterval = setInterval(() => setSeconds(seconds - 1), 1000);
+        if (seconds < 0) {
+          setSeconds(1500);
+          setIsActive(false);
+        }
     } 
     return () => clearInterval(secondInterval);
-  }, [isActive, second]);
+  }, [isActive, seconds]);
 
   const resetCounter = () => {
-    setSecond(1500);
+    setSeconds(1500);
     setIsActive(false);
   }
 
   const showCountdown = () => {
-    const remainingMinutes = Math.floor(second / 60);
-    const remainingSeconds = second % 60;
+    const remainingMinutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
     if (remainingSeconds < 10) {
       return `${remainingMinutes}:0${remainingSeconds}`
     }
     return `${remainingMinutes}:${remainingSeconds}`
-  }
-
+  } 
 
   return (
     <>
