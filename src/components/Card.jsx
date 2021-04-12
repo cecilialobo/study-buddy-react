@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SmallButton from './SmallButton';
-import './Card.css'
+import './Card.css';
 
 const Card = (props) => {
 

@@ -9,3 +9,7 @@
     --light-orange: #FAD1C6;
     --light-blue: #E0ECF6;
 }
+
+.todoContainer {
+    text-align: center;
+}

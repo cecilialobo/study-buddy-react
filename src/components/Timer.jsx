@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import SmallButton from './SmallButton';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import './Timer.css'
 
 const Timer = () => { 
 
-  const [seconds, setSeconds] = useState(2);
+  const [seconds, setSeconds] = useState(1500);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -35,7 +36,20 @@ const Timer = () => {
 
   return (
     <>
-      <h2 className='counter'>{showCountdown()}</h2>
+     <div className='circleTimer'>
+      <CountdownCircleTimer
+        isPlaying={isActive}
+        duration={1500}
+        size={240}
+        colors={[
+          ['#FAD1C6', 0.33],
+          ['#E0ECF6', 0.33],
+          ['#ECFDF0', 0.33],
+        ]}
+      >
+        <h2 className='counter'>{showCountdown()}</h2>
+      </CountdownCircleTimer>
+      </div>
       <div className='smallButtons'>
           <SmallButton 
             className='startBtn button'

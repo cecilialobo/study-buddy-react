@@ -3,8 +3,9 @@
     width: 15rem;
     border-radius: 8px;
     border: 1px solid var(--dark-gray);
-    margin: 5rem auto;
+    margin: 5rem 2rem;
     background-color: var(--header-background);
+    display: inline-block;
 }
 
 .cardContent {
