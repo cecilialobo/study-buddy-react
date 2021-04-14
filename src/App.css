@@ -2,12 +2,13 @@
 
 :root {
     --dark-gray: #5C5C5C;
-    --header-orange: #EF776C;
+    --header-orange: #E1515F;
     --header-background: #FCFAEE;
     --light-green: #ECFDF0;
     --light-gray: #F5F5F5;
     --light-orange: #FAD1C6;
     --light-blue: #D9E7FC;
+    --purple: #E3E3F3;
 }
 
 .todoContainer {
