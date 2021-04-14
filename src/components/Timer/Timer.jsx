@@ -1,27 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import SmallButton from './SmallButton';
-import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import SmallButton from '../SmallButton/SmallButton';
 import './Timer.css'
 
-const Timer = () => { 
+const Timer = (props) => { 
 
-  const [seconds, setSeconds] = useState(1500);
+  const [seconds, setSeconds] = useState(props.time);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     let secondInterval = null;
-    if (isActive) {
+
+    if (seconds < 1) {
+      setIsActive(false);
+    } else if (isActive) {
         secondInterval = setInterval(() => setSeconds(seconds - 1), 1000);
-        if (seconds < 0) {
-          setSeconds(1500);
-          setIsActive(false);
-        }
     } 
     return () => clearInterval(secondInterval);
   }, [isActive, seconds]);
 
   const resetCounter = () => {
-    setSeconds(1500);
+    setSeconds(props.time);
     setIsActive(false);
   }
 
@@ -36,20 +34,7 @@ const Timer = () => {
 
   return (
     <>
-     <div className='circleTimer'>
-      <CountdownCircleTimer
-        isPlaying={isActive}
-        duration={1500}
-        size={240}
-        colors={[
-          ['#FAD1C6', 0.33],
-          ['#E0ECF6', 0.33],
-          ['#ECFDF0', 0.33],
-        ]}
-      >
-        <h2 className='counter'>{showCountdown()}</h2>
-      </CountdownCircleTimer>
-      </div>
+      <h2 className='counter'>{showCountdown()}</h2>
       <div className='smallButtons'>
           <SmallButton 
             className='startBtn button'

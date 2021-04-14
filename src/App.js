@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Timer from './components/Timer';
-import Card from './components/Card';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Card from './components/Card/Card';
+import Footer from './components/Footer/Footer';
+import Toggle from './components/ToggleComponents/ToggleComponents';
 
 function App() {
 
@@ -19,18 +19,18 @@ function App() {
     taskTitle: 'Buy Groceries',
     id:3 
   }];
-
+  
   return (
     <>
       <Header />
-      <Timer />
+      <Toggle />
       <div className='todoContainer'>
         {todos.map((todo) => {
           return (
             <Card 
             key={todo.id}
             taskTitle={todo.taskTitle}
-          />
+            />
           )
         })}
       </div>
