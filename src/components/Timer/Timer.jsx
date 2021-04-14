@@ -23,7 +23,7 @@ const Timer = (props) => {
       secondInterval = setInterval(() => setSeconds(seconds - 1), 1000);
     }
     return () => clearInterval(secondInterval);
-  }, [isActive, seconds]);
+  }, [isActive, seconds, alarmSound]);
 
   const showCountdown = () => {
     const remainingMinutes = Math.floor(seconds / 60);

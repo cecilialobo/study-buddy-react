@@ -13,8 +13,8 @@ const ToggleTimer = () => {
          <button className='breakButton' type='button' onClick={toggleChecked}>
             {toggle ? breakTitle : timerTitle}
          </button>
-         {toggle && <Timer time='1500' />}
-         {!toggle && <Timer time='300' />}
+         {toggle && <Timer time={1500} />}
+         {!toggle && <Timer time={300} />}
       </>
    );
 }
