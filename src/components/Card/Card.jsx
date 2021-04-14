@@ -16,7 +16,7 @@ const Card = (props) => {
         <div className='card'>
             <h3 className='cardContent'>{props.taskTitle}</h3>
             <p className='cardStatus cardContent'>Status: {status}</p>
-            <SmallButton 
+            <SmallButton
                 className='cardButton cardContent'
                 onClick={checkIfDone}
                 title={`Mark as ${btnStatus}`}

@@ -47,7 +47,7 @@ const Header = () => {
       <i className="fas fa-dog" alt='dog icon'></i>
       <p className='currentDate'>{weekDays[weekDayNumber]}, {months[monthNumber]} {dayOfMonth}{daySufix(dayOfMonth)}</p>
     </header>
-    )
+  )
 }
 
 export default Header;
