@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Timer from '../Timer/Timer';
-import './ToggleComponents.css';
+import './ToggleTimer.css';
 
-const ToggleComponents = () => {
+const ToggleTimer = () => {
   const [toggle, setToggle] = useState(true);
   const toggleChecked = () => setToggle(toggle => !toggle);
   const breakTitle = 'Break';
@@ -19,4 +19,4 @@ const ToggleComponents = () => {
   );
 }
 
-export default ToggleComponents;
+export default ToggleTimer;

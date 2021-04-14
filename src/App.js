@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
-import Toggle from './components/ToggleComponents/ToggleComponents';
+import ToggleTimer from './components/ToggleTimer/ToggleTimer';
 
 function App() {
 
@@ -17,13 +17,13 @@ function App() {
   }, 
   { 
     taskTitle: 'Buy Groceries',
-    id:3 
+    id: 3 
   }];
   
   return (
     <>
       <Header />
-      <Toggle />
+      <ToggleTimer />
       <div className='todoContainer'>
         {todos.map((todo) => {
           return (
