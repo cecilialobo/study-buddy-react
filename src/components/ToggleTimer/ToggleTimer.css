@@ -1,9 +1,10 @@
 .breakButton {
     width: 10rem;
     height: 2.5rem;
-    margin: 2rem auto;
+    margin: 4rem auto 2rem auto;
     background-color: var(--purple);
     border-radius: 8px;
     border: 1px solid var(--dark-gray);
     display: block;
+    font-size: 1rem;
 }

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
 import ToggleTimer from './components/ToggleTimer/ToggleTimer';
+import TodoInput from './components/TodoInput/TodoInput';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
     <>
       <Header />
       <ToggleTimer />
+      <TodoInput />
       <div className='todoContainer'>
         {todos.map((todo) => {
           return (

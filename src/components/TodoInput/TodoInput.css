@@ -1,0 +1,28 @@
+.inputContainer {
+    width: fit-content;
+    margin: 8rem auto 2rem auto;
+}
+
+.inputLabel {
+    display: block;
+    font-size: 1.3rem;
+    width: fit-content;
+    margin: 1rem auto;
+    color: var(--dark-gray);
+}
+
+.inputContent {
+    margin: 0.5rem;
+    height: 2rem;
+    width: 18rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+}
+
+.todoButton {
+    height: 2rem;
+    width: 6rem;
+    background-color: var(--light-blue);
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+}
