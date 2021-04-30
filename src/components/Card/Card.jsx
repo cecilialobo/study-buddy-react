@@ -7,6 +7,7 @@ const Card = (props) => {
     const [status, setStatus] = useState('to do');
     const [btnStatus, setBtnStatus] = useState('done');
     const [btnStyle, setBtnStyle] = useState('cardContent');
+    const [cardStyle, setCardStyle] = useState('card')
 
     const checkIfDone = () => {
         status === 'to do' ? setStatus('done') : setStatus('to do');
@@ -14,8 +15,12 @@ const Card = (props) => {
         btnStyle === 'cardContent' ? setBtnStyle ('cardContentDone') : setBtnStyle ('cardContent');
     }
 
+    const deleteCard = () => {
+        setCardStyle('deleted');
+    }
+
     return (
-        <div className='card'>
+        <div className={cardStyle}>
             <h3 className={btnStyle}>{props.taskTitle}</h3>
             <p className='cardStatus cardContent'>Status: {status}</p>
             <SmallButton
@@ -25,7 +30,7 @@ const Card = (props) => {
             />
             <SmallButton
                 className='cardButton'
-                onClick={console.log('delete')}
+                onClick={deleteCard}
                 title='Delete'
             />
         </div>

@@ -5,21 +5,9 @@ import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
 import ToggleTimer from './components/ToggleTimer/ToggleTimer';
 import TodoInput from './components/TodoInput/TodoInput';
+import todos from './todos';
 
 function App() {
-
-  const todos = [{
-    taskTitle: 'Walk Nala',
-    id: 1
-  }, 
-  {
-    taskTitle: 'Study React Context',
-    id: 2
-  }, 
-  { 
-    taskTitle: 'Buy Groceries',
-    id: 3 
-  }];
   
   return (
     <>
