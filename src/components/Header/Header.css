@@ -38,6 +38,15 @@ h1 {
         height: 10vh;
     }
 
+    h1 {
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .fas {
+        display: none;
+    }
+
     .currentDate {
         float: none;
         width: 12rem;

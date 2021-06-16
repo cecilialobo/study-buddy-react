@@ -26,3 +26,12 @@
     border: 1px solid var(--dark-gray);
     border-radius: 8px;
 }
+
+@media screen and (max-width: 400px) {
+    .inputContent {
+        margin: 1rem 2.3rem;
+    }
+    .todoButton{
+        margin: 1rem 8rem;
+    }
+}
