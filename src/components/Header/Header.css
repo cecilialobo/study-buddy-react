@@ -15,7 +15,7 @@ h1 {
     width: fit-content;
     display: inline-block;
     color: var(--header-orange);
-    margin: 2rem 1rem 2rem 10rem;
+    margin: 2rem 1rem 2rem 5rem;
 }
 
 .fas {
@@ -29,4 +29,20 @@ h1 {
     font-size: 2rem;
     color: var(--dark-gray);
     font-weight: 300;
+}
+
+@media screen and (max-width: 1020px) {
+    header {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .currentDate {
+        float: none;
+        width: 12rem;
+        margin: 0 auto;
+        font-size: 1rem;
+        display: block;
+    }
 }
